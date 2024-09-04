@@ -65,7 +65,7 @@ Este script renomeia arquivos em um diretório especificado, substituindo uma su
    cd rename-files
    ```
 
-3. **Modifique o Script**: Edite o arquivo [`index.php`](command:_github.copilot.openRelativePath?%5B%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fc%3A%2Fxampp%2Fhtdocs%2Frename-file%2Findex.php%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%5D "c:\\xampp\htdocs\rename-file\index.php") para definir o diretório e as strings de busca e substituição conforme necessário.
+3. **Modifique o Script**: Edite o arquivo [`index.php`]("index.php") para definir o diretório e as strings de busca e substituição conforme necessário.
 
 4. **Execute o Script**: Execute o script no seu ambiente PHP.
 
