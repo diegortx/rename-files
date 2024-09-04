@@ -1,90 +1,89 @@
-# 📁 Script de Renomeação de Arquivos
+# 📁 File Renaming Script
 
-Este script renomeia arquivos em um diretório especificado, substituindo uma substring específica nos nomes dos arquivos.
+This script renames files in a specified directory by replacing a specific substring in the filenames.
 
-## 🚀 Como Funciona
+## 🚀 How It Works
 
-1. **Especificar o Diretório**: O script começa especificando o diretório que contém os arquivos a serem renomeados.
-2. **Converter o Caminho do Diretório**: Ele converte o caminho do diretório para usar barras invertidas para compatibilidade com o Windows.
-3. **Definir Strings de Busca e Substituição**: O script define a substring a ser buscada nos nomes dos arquivos e a string para substituí-la.
-4. **Verificar Existência do Diretório**: Ele verifica se o diretório especificado existe.
-5. **Obter Lista de Arquivos**: O script recupera a lista de arquivos no diretório.
-6. **Renomear Arquivos**: Para cada arquivo, ele verifica se o arquivo é um arquivo regular e contém a substring de busca. Se sim, ele renomeia o arquivo substituindo a substring pela string de substituição.
+1. **Specify the Directory**: The script starts by specifying the directory containing the files to be renamed.
+2. **Convert Directory Path**: It converts the directory path to use backslashes for Windows compatibility.
+3. **Define Search and Replace Strings**: The script defines the substring to be searched in the filenames and the string to replace it with.
+4. **Check Directory Existence**: It checks if the specified directory exists.
+5. **Get File List**: The script retrieves the list of files in the directory.
+6. **Rename Files**: For each file, it checks if the file is a regular file and contains the search substring. If so, it renames the file by replacing the substring with the replacement string.
 
-## 🔧 Funções
+## 🔧 Functions
 
-- `is_dir($directory)`: Verifica se o diretório especificado existe.
-- `scandir($directory)`: Recupera a lista de arquivos no diretório.
-- `is_file($oldPath)`: Verifica se o caminho especificado é um arquivo regular.
-- `strpos($file, $searchString)`: Verifica se o nome do arquivo contém a substring de busca.
-- `str_replace($searchString, $replaceString, $file)`: Substitui a substring de busca pela string de substituição no nome do arquivo.
-- `rename($oldPath, $newPath)`: Renomeia o arquivo do caminho antigo para o novo caminho.
+- `is_dir($directory)`: Checks if the specified directory exists.
+- `scandir($directory)`: Retrieves the list of files in the directory.
+- `is_file($oldPath)`: Checks if the specified path is a regular file.
+- `strpos($file, $searchString)`: Checks if the filename contains the search substring.
+- `str_replace($searchString, $replaceString, $file)`: Replaces the search substring with the replacement string in the filename.
+- `rename($oldPath, $newPath)`: Renames the file from the old path to the new path.
 
-## 📋 Exemplo de Uso
+## 📋 Usage Example
 
-1. **Definir o Diretório e as Strings**: Modifique as variáveis `$directory`, `$searchString` e `$replaceString` no script para corresponder às suas necessidades.
+1. **Define the Directory and Strings**: Modify the variables `$directory`, `$searchString`, and `$replaceString` in the script to match your needs.
 
    ```php
    <?php
-   // Especificar o diretório contendo os arquivos
-   $directory = "C:/Users/Seu_Usuario/Downloads/Sua_Pasta_de_Musicas";
-   // Converter o caminho do diretório para usar barras invertidas no Windows
+   // Specify the directory containing the files
+   $directory = "C:/Users/Your_User/Downloads/Your_Music_Folder";
+   // Convert the directory path to use backslashes on Windows
    $directory = str_replace('/', DIRECTORY_SEPARATOR, $directory);
-   $searchString = '[Seu Nome] Nome do Álbum Antigo';
-   $replaceString = '[Seu Nome] ';
+   $searchString = '[Your Name] Old Album Name';
+   $replaceString = '[Your Name] ';
    ```
 
-2. **Executar o Script**: Execute o script no seu ambiente PHP.
+2. **Run the Script**: Execute the script in your PHP environment.
 
    ```sh
    php index.php
    ```
 
-3. **Saída**: O script exibirá os arquivos renomeados ou quaisquer erros encontrados durante o processo de renomeação.
-
+3. **Output**: The script will display the renamed files or any errors encountered during the renaming process.
    ```
-   Renamed: [Seu Nome] Nome do Álbum Antigo - Musica1.mp3 -> [Seu Nome] - Musica1.mp3
-   Renamed: [Seu Nome] Nome do Álbum Antigo - Musica2.mp3 -> [Seu Nome] - Musica2.mp3
+   Renamed: [Your Name] Old Album Name - Song1.mp3 -> [Your Name] - Song1.mp3
+   Renamed: [Your Name] Old Album Name - Song2.mp3 -> [Your Name] - Song2.mp3
    ```
 
-## 📦 Requisitos
+## 📦 Requirements
 
-- **Versão do PHP**: Este script requer PHP 7.4 ou superior.
+- **PHP Version**: This script requires PHP 7.4 or higher.
 
-## 📥 Como Baixar e Usar
+## 📥 How to Download and Use
 
-1. **Clone o Repositório**: Clone este repositório para o seu ambiente local.
+1. **Clone the Repository**: Clone this repository to your local environment.
 
    ```sh
    git clone https://github.com/diegortx/rename-files.git
    ```
 
-2. **Navegue até o Diretório do Projeto**: Vá para o diretório do projeto clonado.
+2. **Navigate to the Project Directory**: Go to the cloned project directory.
 
    ```sh
    cd rename-files
    ```
 
-3. **Modifique o Script**: Edite o arquivo [`index.php`]("index.php") para definir o diretório e as strings de busca e substituição conforme necessário.
+3. **Modify the Script**: Edit the [`index.php`](index.php) file to set the directory and search and replace strings as needed.
 
-4. **Execute o Script**: Execute o script no seu ambiente PHP.
+4. **Run the Script**: Execute the script in your PHP environment.
 
    ```sh
    php index.php
    ```
 
-## 📝 Notas
+## 📝 Notes
 
-- Certifique-se de que o caminho do diretório especificado está correto e acessível.
-- O script apenas renomeia arquivos regulares e ignora diretórios.
-- Faça backup dos seus arquivos antes de executar o script para evitar perda acidental de dados.
+- Make sure the specified directory path is correct and accessible.
+- The script only renames regular files and ignores directories.
+- Backup your files before running the script to avoid accidental data loss.
 
-## 👤 Autor
+## 👤 Author
 
-- **Nome**: Diego H Nogueira
+- **Name**: Diego H Nogueira
 - **Email**: [dhnogueira1@hotmail.com](mailto:dhnogueira1@hotmail.com)
 - **GitHub**: [diegortx](https://github.com/diegortx)
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está licenciado sob a Licença MIT.
+This project is licensed under the MIT License.
