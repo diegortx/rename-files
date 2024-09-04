@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📁 File Renaming Script
 
 This script renames files in a specified directory by replacing a specific substring in the filenames.
@@ -87,3 +88,6 @@ This script renames files in a specified directory by replacing a specific subst
 ## 📄 License
 
 This project is licensed under the MIT License.
+=======
+# rename-files
+>>>>>>> 354fcab0558aa34b595943023032c0a71f1dad56
