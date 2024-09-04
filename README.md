@@ -1,8 +1,8 @@
-# Script de Renomeação de Arquivos
+# 📁 Script de Renomeação de Arquivos
 
 Este script renomeia arquivos em um diretório especificado, substituindo uma substring específica nos nomes dos arquivos.
 
-## Como Funciona
+## 🚀 Como Funciona
 
 1. **Especificar o Diretório**: O script começa especificando o diretório que contém os arquivos a serem renomeados.
 2. **Converter o Caminho do Diretório**: Ele converte o caminho do diretório para usar barras invertidas para compatibilidade com o Windows.
@@ -11,7 +11,7 @@ Este script renomeia arquivos em um diretório especificado, substituindo uma su
 5. **Obter Lista de Arquivos**: O script recupera a lista de arquivos no diretório.
 6. **Renomear Arquivos**: Para cada arquivo, ele verifica se o arquivo é um arquivo regular e contém a substring de busca. Se sim, ele renomeia o arquivo substituindo a substring pela string de substituição.
 
-## Funções
+## 🔧 Funções
 
 - `is_dir($directory)`: Verifica se o diretório especificado existe.
 - `scandir($directory)`: Recupera a lista de arquivos no diretório.
@@ -20,7 +20,7 @@ Este script renomeia arquivos em um diretório especificado, substituindo uma su
 - `str_replace($searchString, $replaceString, $file)`: Substitui a substring de busca pela string de substituição no nome do arquivo.
 - `rename($oldPath, $newPath)`: Renomeia o arquivo do caminho antigo para o novo caminho.
 
-## Exemplo de Uso
+## 📋 Exemplo de Uso
 
 1. **Definir o Diretório e as Strings**: Modifique as variáveis `$directory`, `$searchString` e `$replaceString` no script para corresponder às suas necessidades.
 
@@ -47,12 +47,38 @@ Este script renomeia arquivos em um diretório especificado, substituindo uma su
    Renamed: [Seu Nome] Nome do Álbum Antigo - Musica2.mp3 -> [Seu Nome] - Musica2.mp3
    ```
 
-## Notas
+## 📦 Requisitos
+
+- **Versão do PHP**: Este script requer PHP 7.4 ou superior.
+
+## 📥 Como Baixar e Usar
+
+1. **Clone o Repositório**: Clone este repositório para o seu ambiente local.
+
+   ```sh
+   git clone https://github.com/seuusuario/rename-files.git
+   ```
+
+2. **Navegue até o Diretório do Projeto**: Vá para o diretório do projeto clonado.
+
+   ```sh
+   cd rename-files
+   ```
+
+3. **Modifique o Script**: Edite o arquivo [`index.php`]("index.php") para definir o diretório e as strings de busca e substituição conforme necessário.
+
+4. **Execute o Script**: Execute o script no seu ambiente PHP.
+
+   ```sh
+   php index.php
+   ```
+
+## 📝 Notas
 
 - Certifique-se de que o caminho do diretório especificado está correto e acessível.
 - O script apenas renomeia arquivos regulares e ignora diretórios.
 - Faça backup dos seus arquivos antes de executar o script para evitar perda acidental de dados.
 
-## Licença
+## 📄 Licença
 
 Este projeto está licenciado sob a Licença MIT.
